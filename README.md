@@ -1,1 +1,1 @@
-# Projeto_EscolaDeIdiomasWeb1
+Site para uma escola de idiomas: Elabore um site para uma escola de línguas. A página inicial deve apresentar a escola e seus diferenciais. A segunda deve listar os cursos disponíveis com horários. A terceira deve exibir a equipe de professores. A quarta deve conter informações sobre matrícula e valores. A quinta deve conter um iframe com vídeo institucional do YouTube
