@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrícula | Global Idiomas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Global Idiomas</h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="professores.html">Professores</a>
+            <a href="matriculas.html">Matrícula</a> 
+            <a href="institucional.html">Institucional</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secao-titulo">
+            <h2 id="matricula">Matricule-se na Global Idiomas!</h2>
+            <p id="intro-matricula">Dê o primeiro passo para o seu futuro bilíngue. Preencha nosso formulário ou entre em contato.</p>
+        </section>
+
+        <section class="formulario-matricula">
+            <h3>Preencha seus Dados</h3>
+            <form>
+                <div class="form-grupo">
+                    <label for="nome"><i class="fas fa-user"></i> Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-grupo">
+                    <label for="telefone"><i class="fas fa-phone"></i> Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" 
+                        placeholder="(XX) XXXXX-XXXX">
+                </div>
+                <div class="form-grupo">
+                    <label for="curso"><i class="fas fa-book"></i> Curso de Interesse:</label>
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione um curso</option>
+                        <option value="ingles">Inglês</option>
+                        <option value="espanhol">Espanhol</option>
+                        <option value="frances">Francês</option>
+                        <option value="alemao">Alemão</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem / Dúvidas:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+                </div>
+                <button type="submit" class="botao-enviar">Enviar Matrícula</button>
+            </form>
+        </section>
+
+        <section class="secao-valores">
+            <h3>Valores e Condições Especiais</h3>
+            <div class="card-valor">
+                <h4><i class="fa-solid fa-dollar-sign"></i>Mensalidade</h4>
+                <p class="valor">R$ 350,00</p>
+                <p>Valor por curso e nível.</p>
+            </div>
+            <div class="card-valor">
+                <h4><i class="fa-solid fa-money-bill"></i>Taxa de Matrícula</h4>
+                <p class="valor">R$ 100,00</p>
+                <p>Pagamento único na inscrição.</p>
+            </div>
+            <div class="card-valor">
+                <h4><i class="fa-solid fa-percent"></i>Descontos</h4>
+                <p class="valor">Até 15%</p>
+                <p>Para pagamentos semestrais ou anuais.</p>
+                <p>Consulte nossas promoções!</p>
+            </div>
+        </section>
+
+        <section class="secao-contato">
+            <h3>Dúvidas?</h3>
+            <p>Estamos prontos para te ajudar!</p>
+            <p><i class="fas fa-envelope"></i> E-mail: contato@idiomasglobal.com</p>
+            <p><i class="fab fa-whatsapp"></i> WhatsApp: (42) 99999-9999</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>2025 Global Idiomas</p>
+    </footer>
+
+</body>
+
+</html>

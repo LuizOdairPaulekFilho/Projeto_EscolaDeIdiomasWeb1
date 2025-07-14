@@ -1,0 +1,851 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Serif Text", serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding: 0;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    padding: 1rem 2rem;
+  }
+}
+header h1 {
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  header nav {
+    margin-top: 0;
+    display: flex;
+    gap: 10px;
+  }
+}
+header a {
+  color: #f4f4f4;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+header a:hover {
+  text-decoration: underline;
+  color: #0080ff;
+  transform: translateY(-2px);
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+
+.professores {
+  list-style: none;
+  padding: 0;
+}
+.professores li {
+  margin-bottom: 0.5rem;
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.diferenciais-grid .card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "TikTok Sans", sans-serif;
+}
+.diferenciais-grid .card h3 {
+  margin-top: 0;
+  color: #003366;
+  font-size: 1.3rem;
+}
+.diferenciais-grid .card i {
+  color: #003366;
+  margin-right: 0.5rem;
+}
+.diferenciais-grid .card p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.1rem;
+}
+.diferenciais-grid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.intro {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 800px;
+}
+.intro p {
+  font-size: 1.4rem;
+  color: #003366;
+  line-height: 1.5;
+  margin: 0 auto;
+  font-family: "DM Serif Text", serif;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 25%));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  max-width: 1200px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cursos-grid #titulo-curso {
+  grid-column: 1/-1;
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "DM Serif Text", serif;
+}
+.cursos-grid h2 {
+  grid-column: 1/-1;
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-family: "TikTok Sans", sans-serif;
+}
+.cursos-grid .card {
+  background: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: "TikTok Sans", sans-serif;
+}
+.cursos-grid .card h3 {
+  margin-top: 0;
+  color: #003366;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cursos-grid .card p {
+  margin-top: 0.5rem;
+}
+.cursos-grid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.cta {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.cta h2 {
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-family: "DM Serif Text", serif;
+}
+.cta p {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 1.4rem;
+  font-family: "DM Serif Text", serif;
+  line-height: 15px;
+}
+.cta .btn-matricula {
+  background-color: #003366;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.cta .btn-matricula:hover {
+  background-color: #002a54;
+}
+
+.hero {
+  background: radial-gradient(rgba(21, 124, 226, 0.7), rgba(0, 51, 102, 0.8));
+  color: white;
+  text-align: center;
+  padding: 5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+}
+.hero h2 {
+  font-family: "DM Serif Text", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  font-family: "DM Serif Text", serif;
+}
+.hero .btn-cta {
+  background-color: #0073e6;
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero .btn-cta:hover {
+  background-color: #0080ff;
+  transform: translateY(-3px);
+}
+
+.secao-titulo {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+.secao-titulo h2 {
+  font-family: "DM Serif Text", serif;
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+.secao-titulo p {
+  font-size: 1.2rem;
+  color: #003366;
+  font-family: "DM Serif Text", serif;
+}
+
+.secao-cursos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.card-curso {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 1rem);
+  min-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 768px) {
+  .card-curso {
+    width: calc(50% - 1rem);
+  }
+}
+@media (max-width: 500px) {
+  .card-curso {
+    width: 100%;
+  }
+}
+.card-curso:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.card-curso h3 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.card-curso i {
+  color: #003366;
+  margin-right: 0.5rem;
+}
+.card-curso p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  color: #003366;
+  font-family: "TikTok Sans", sans-serif;
+}
+.card-curso .botao {
+  background-color: #003366;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+.card-curso .botao:hover {
+  background-color: #001a33;
+}
+
+.secao-tabela {
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+  overflow-x: auto;
+}
+.secao-tabela h2 {
+  font-family: "DM Serif Text", serif;
+  font-size: 2.2rem;
+  color: #003366;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.secao-tabela table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.secao-tabela table th {
+  background-color: #003366;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border: 1px solid #99ccff;
+  padding: 1rem;
+  text-align: left;
+  font-family: "TikTok Sans", sans-serif;
+}
+.secao-tabela table td {
+  border: 1px solid #99ccff;
+  padding: 1rem;
+  text-align: left;
+  font-family: "TikTok Sans", sans-serif;
+}
+.secao-tabela .nota {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  color: #003366;
+}
+.secao-tabela .botao-secundario {
+  background-color: #004d99;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto 0 auto;
+}
+.secao-tabela .botao-secundario:hover {
+  background-color: #00264d;
+}
+
+.formulario-matricula {
+  background: white;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.formulario-matricula h3 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.formulario-matricula .form-grupo {
+  margin-bottom: 1.5rem;
+}
+.formulario-matricula .form-grupo label {
+  display: block;
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.formulario-matricula .form-grupo label i {
+  margin-right: 0.5rem;
+  color: #003366;
+}
+.formulario-matricula .form-grupo input[type=text],
+.formulario-matricula .form-grupo input[type=email],
+.formulario-matricula .form-grupo input[type=tel],
+.formulario-matricula .form-grupo select,
+.formulario-matricula .form-grupo textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "TikTok Sans", sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.formulario-matricula .form-grupo input[type=text]:focus,
+.formulario-matricula .form-grupo input[type=email]:focus,
+.formulario-matricula .form-grupo input[type=tel]:focus,
+.formulario-matricula .form-grupo select:focus,
+.formulario-matricula .form-grupo textarea:focus {
+  border-color: #003366;
+  outline: none;
+}
+.formulario-matricula .form-grupo textarea {
+  resize: vertical;
+}
+.formulario-matricula button[type=submit] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  background-color: #003366;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.secao-valores {
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+  text-align: center;
+}
+.secao-valores h3 {
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+.secao-valores i {
+  color: #003366;
+  margin-right: 0.5rem;
+}
+.secao-valores .card-valor {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  vertical-align: top;
+  margin: 1rem;
+  width: calc(33% - 2rem);
+  min-width: 250px;
+}
+@media (max-width: 768px) {
+  .secao-valores .card-valor {
+    width: calc(50% - 2rem);
+  }
+}
+@media (max-width: 500px) {
+  .secao-valores .card-valor {
+    width: 100%;
+    margin: 1rem 0;
+  }
+}
+.secao-valores .card-valor h4 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.secao-valores .card-valor .valor {
+  font-family: "TikTok Sans", sans-serif;
+  font-size: 2.5rem;
+  color: #000d1a;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.secao-valores .card-valor p {
+  font-size: 1rem;
+  color: #003366;
+  font-family: "TikTok Sans", sans-serif;
+}
+
+.secao-contato {
+  background: white;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.secao-contato h3 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  margin: auto;
+}
+.secao-contato p {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+  font-family: "TikTok Sans", sans-serif;
+}
+.secao-contato i {
+  margin-right: 0.5rem;
+  color: #003366;
+}
+
+#matricula {
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#intro-matricula {
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.professores-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+}
+.professores-grid .professor-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: calc(33% - 1.5rem);
+  min-width: 280px;
+}
+@media (max-width: 768px) {
+  .professores-grid .professor-card {
+    width: calc(50% - 1.5rem);
+  }
+}
+@media (max-width: 500px) {
+  .professores-grid .professor-card {
+    width: 100%;
+    margin: 0;
+  }
+}
+.professores-grid .professor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+.professores-grid .professor-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #003366;
+}
+.professores-grid .professor-card h3 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.professores-grid .professor-card .idioma-lecionado {
+  font-size: 1rem;
+  color: #0066cc;
+  margin-bottom: 1rem;
+}
+.professores-grid .professor-card .idioma-lecionado i {
+  margin-right: 0.5rem;
+  color: #003366;
+}
+.professores-grid .professor-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #003366;
+  margin-bottom: 1.5rem;
+}
+.professores-grid .professor-card .redes-sociais {
+  margin-top: 1rem;
+}
+.professores-grid .professor-card .redes-sociais a {
+  color: #003366;
+  font-size: 1.5rem;
+  margin: 0 0.8rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+.professores-grid .professor-card .redes-sociais a:hover {
+  color: #0066cc;
+  transform: translateY(-2px);
+}
+
+#intro-prof {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "DM Serif Text", serif;
+}
+
+#titulo-prof {
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.secao-contato-professores {
+  background: white;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.secao-contato-professores h3 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+.secao-contato-professores p {
+  font-size: 1.1rem;
+  color: #003366;
+  margin-bottom: 2rem;
+}
+.secao-contato-professores .botao-secundario {
+  background-color: #004d99;
+  color: white;
+  padding: 0.8rem 1.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2rem auto 0 auto;
+}
+.secao-contato-professores .botao-secundario:hover {
+  background-color: #00264d;
+}
+
+.secao-sobre-nos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  padding: 0 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .secao-sobre-nos {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+.secao-sobre-nos .conteudo-sobre-nos {
+  flex: 1;
+}
+.secao-sobre-nos .conteudo-sobre-nos h3 {
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.secao-sobre-nos .conteudo-sobre-nos p {
+  font-size: 1.1rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+.secao-sobre-nos .conteudo-sobre-nos strong {
+  color: #001a33;
+}
+.secao-sobre-nos .imagem-sobre-nos {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.secao-sobre-nos .imagem-sobre-nos img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secao-metodologia {
+  background-color: white;
+  padding: 3rem 1rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.secao-metodologia h3 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.secao-metodologia p {
+  font-size: 1.1rem;
+  color: #003366;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+.secao-metodologia .metodologia-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.secao-metodologia .metodologia-cards .card-metodo {
+  background-color: #f0f0f0;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: calc(25% - 1.2rem);
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (max-width: 992px) {
+  .secao-metodologia .metodologia-cards .card-metodo {
+    width: calc(50% - 1rem);
+  }
+}
+@media (max-width: 576px) {
+  .secao-metodologia .metodologia-cards .card-metodo {
+    width: 100%;
+  }
+}
+.secao-metodologia .metodologia-cards .card-metodo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.secao-metodologia .metodologia-cards .card-metodo i {
+  font-size: 2.5rem;
+  color: #003366;
+  margin-bottom: 0.8rem;
+}
+.secao-metodologia .metodologia-cards .card-metodo h4 {
+  font-family: "TikTok Sans", sans-serif;
+  color: #003366;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.secao-metodologia .metodologia-cards .card-metodo p {
+  font-size: 0.9rem;
+  color: #003366;
+  margin: 0;
+}
+
+.secao-video {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 900px;
+  padding: 0 1rem;
+}
+.secao-video h3 {
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.secao-video .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.secao-video .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.secao-video .legenda-video {
+  font-size: 0.9rem;
+  color: #0066cc;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+#intro-inst {
+  font-size: 1.2rem;
+  color: #003366;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "DM Serif Text", serif;
+}
+
+#titulo-inst {
+  font-family: "DM Serif Text", serif;
+  color: #003366;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
